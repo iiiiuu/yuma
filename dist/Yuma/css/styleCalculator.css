@@ -1,0 +1,119 @@
+* {
+    --main-bg-color: #232323;
+    --imputSpace-bg-color: #514f4f;
+    --buttons-figur-bg-color: #393939;
+    --buttons-oper-bg-orange: #FA9B20;
+    --buttons-oper-bg-gray: #AEABABFF;
+
+}
+
+.calc {
+    margin-left: 300px;
+    margin-top: 100px;
+    top: 50px;
+    left: 350px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.calc {
+    position: absolute;
+}
+
+.calc-body {
+    position: absolute;
+    height: 600px;
+    width: 400px;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    font-family: Arial,sans-serif;
+    font-size: 35px;
+    color: white;
+    box-shadow: 4px 4px 4px #3a3c43;
+
+}
+
+.sidebar.close ~ .calc {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
+.calc-screen{
+    background: var( --imputSpace-bg-color);
+    width: 360px;
+    height: 100px;
+    margin: 20px;
+    padding:10px;
+    border-radius: 10px;
+    display:grid;
+    justify-items: right;
+}
+
+
+.calc-screen p{
+    text-align:right;
+    font-size: 3rem;
+    margin-right: 10px;
+    color: white;
+
+}
+
+
+
+.calc-screen .start-input {
+    font-weight: 500;
+    padding: 10px 10px;
+
+
+ }
+
+.buttons{
+    position: absolute;
+    margin: 20px;
+    width: 360px;
+    height:400px;
+    display:grid;
+    grid-template-areas:
+    "AC plus-minus percent division"
+    "seven eight nine multiplication"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap:7px;
+    justify-items: center;
+}
+
+.btn{
+    width: 65px;
+    height: 65px;
+    background: var( --buttons-figur-bg-color);
+    border-radius: 50%;
+    line-height: 65px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn.zero{
+    grid-area:zero;
+    width: 100%;
+    border-radius: 35px;
+}
+
+.btn.bg-orange{
+    background: var(--buttons-oper-bg-orange);
+}
+
+.btn.bg-gray{
+    background: var(--buttons-oper-bg-gray);
+}
+.btn:hover{
+    filter: brightness(120%);
+}
+
+.btn:active{
+    filter: brightness(80%);
+}
